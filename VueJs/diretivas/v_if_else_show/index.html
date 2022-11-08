@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diretivas - V-IF / V-ELSE / V-FOR </title>
+</head>
+
+<body>
+    <!-- EXEMPLO V-IF / V-ELSE / V-FOR -->
+
+    <div id="app">
+      <h1> Diretivas - V-IF / V-ELSE / V-FOR </h1>
+      <p>Olá, {{ name }}</p>
+      <p>Sua idadde é {{ age }}</p>
+      <p v-if="age >= 18">Seu voto é Obrigatório!</p>
+      <!-- <p v-show="age >= 18">Seu voto é Obrigatório!</p> -->
+     
+      <p v-else>Voto não obrigatorio</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

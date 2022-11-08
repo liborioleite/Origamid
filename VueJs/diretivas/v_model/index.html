@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Model </title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>{{title}}</h1>
+        <label for="">Nome</label>
+        <input type="text" v-model="name">
+
+        <br><br>
+        <label for="">Telefone</label>
+        <input type="text" v-model="phone">
+
+        <br><br>
+        <label for="">Deseja receber novidades?</label>
+        <input type="radio" value="Sim" name="radio" v-model="news"> Sim
+        <input type="radio" value="Não" name="radio" v-model="news"> Não
+
+        <br><br>
+        <label for="">Interesses</label><br>
+        <input type="checkbox" value="Jogar" name="Jogar" v-model="interesses">Jogar <br>
+        <input type="checkbox" value="Bebidas" name="Bebidas" v-model="interesses">Bebidas <br>
+        <input type="checkbox" value="Luta" name="Luta" v-model="interesses">Luta <br>
+
+        <br>
+
+        <label for="">Como nos conheceu?</label><br><br>
+        <select v-model="conheceu">
+
+            <option value="" aria-checked="true">Escolha</option>
+            <option value="Google">Google</option>
+            <option value="TV">TV</option>
+            <option value="Revista">Revista</option>
+
+        </select>
+
+        <button>Enviar</button>
+
+        <hr>
+
+        <p>Nome: {{name}}</p>
+        <p>Telefone: {{phone}}</p>
+        <p>Deseja receber novidades?: {{news}}</p>
+        <p>Interesses: {{interesses}}</p>
+        <p>Como nos conheceu?: {{conheceu}}</p>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

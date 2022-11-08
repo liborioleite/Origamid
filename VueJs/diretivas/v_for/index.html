@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS </title>
+</head>
+
+<body>
+    <!-- Declaramos nossa tag app como de costume para refernciar nossa instancia -->
+    <div id="app">
+        <!-- Dentro da tag h1 colocamos nosso parametro title para ser exibido -->
+        <h1> {{title}} </h1>
+
+
+        <ul>
+            <!-- Declaramos uma UL e dentro do LI faremos a inserção da diretiva V-for -->
+            <!-- O V-For será responsável por percorrer os paramentros da lista para exibi-la item
+            por item -->
+            <!-- Apenas declaramos uma variavel interna achamada item dentro da variavel linguagens -->
+            <li v-for="(item, index) in linguagens"> {{index}} - {{item.name}}</li><br><br>
+
+            <span>Exemplo com nomes aleatorios</span><br><br>
+            <!-- A declararmos as variaveis podemos colocar qualquer nome a ela, pois servirá
+             somente intermanente para percorrer e identificar os valores -->
+             <!-- exemplo -->
+
+             <li v-for="(xuxu, cachorro) in linguagens"> {{cachorro}} - {{xuxu.name}}</li>
+
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
