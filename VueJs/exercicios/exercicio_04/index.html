@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .green{
+            color: green;
+        }
+        .red{
+            color: red;
+        }
+    </style>
+    <title>Vue.JS </title>
+</head>
+
+<body>
+
+    <div id="app">
+       
+        <p>Nome da Empresa: <span>{{apple.companyName}}</span></p>
+        <p>Valor de Mercado: <span :class="apple.marketCap > google.marketCap ? 'green' : 'red' ">{{apple.marketCap}}</span></p>
+        <!-- <button @click="getApple()">Consultar Apple</button> -->
+
+        <br><br>
+
+        <p>Nome da Empresa: <span>{{google.companyName}}</span></p>
+        <p>Valor de Mercado: <span :class="google.marketCap > apple.marketCap ? 'green' : 'red' ">{{google.marketCap}}</span></p>
+        
+        <br><br>
+        
+        <button @click=" result()">Resultado</button>
+       
+        
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

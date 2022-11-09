@@ -11,6 +11,10 @@ const vm = new Vue({
             {name: 'Java'},
             {name: 'Python'},
             {name: 'C#'},
-        ]
+        ],
+
+        user: {
+            name: 'joaquim'
+        }
     }
 });
